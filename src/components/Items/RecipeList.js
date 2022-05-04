@@ -1,12 +1,12 @@
 import React from "react";
 
 
-const List = () => {
+function RecipeList() {
   return (
     <div>
-      
+
     </div>
-  )
+  );
 }
 
-export default List
+export default RecipeList
