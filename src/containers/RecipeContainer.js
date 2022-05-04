@@ -8,13 +8,21 @@ import React from "react";
 
 
 export default function RecipeContainer() {
+const [recipes, setRecipes] = useState([])
   
-  const fetchData = async () => {
-    try{
-      const resp = await fetch("http://localhost:3000/meals")
-
-    }
+const fetchData = async () => {
+  try {
+      const resp = await fetch("http://localhost:3001/meals")
+      const data = await resp.json()
+      setRecipes(data)
+  } catch (error) {
+      alert(error)
   }
+}
+
+useEffect(() => {
+ fetchData()
+}, [])
 
 
 
