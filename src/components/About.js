@@ -1,12 +1,12 @@
 import React from "react";
 
 
-const About = () => {
+export const About = () => {
   return (
-    <div>
-      
+    <div> style={{width: "100%"}}
+     <p style={{fontSize:"1em", fontWeight: "400"}}> This is a website is for all seafood eaters and pescatarians</p>
     </div>
   )
 }
 
-export default About
+

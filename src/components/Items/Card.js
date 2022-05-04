@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Card = () => {
+const RecipeCard = () => {
   return (
     <div>
       
