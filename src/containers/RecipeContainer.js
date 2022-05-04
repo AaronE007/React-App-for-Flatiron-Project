@@ -14,6 +14,7 @@ const fetchData = async () => {
   try {
       const resp = await fetch("http://localhost:3001/meals")
       const data = await resp.json()
+      console.log(data)
       setRecipes(data)
   } catch (error) {
       alert(error)
