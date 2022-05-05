@@ -30,7 +30,7 @@ useEffect(() => {
 
   return (
     <div>
-      <RecipeList />
+      <RecipeList recipes={recipes} />
     </div>
   )
 }

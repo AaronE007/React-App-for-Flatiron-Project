@@ -1,8 +1,9 @@
 import React from "react";
-import { RecipeContainer} from '../items/RecipeContainer';
-import { RecipeCard} from './items/CharacterCard';
+import RecipeContainer from '../items/RecipeContainer';
+import  RecipeCard from './items/RecipeCard';
 import {About} from './About'
-import {Header} from './nav/Header'
+import Header from './nav/Header'
+import NavBar from './nav/Navbar'
 
 
 
@@ -10,7 +11,7 @@ import {Header} from './nav/Header'
 
 
 
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import './App.css';
 import Home from './Home';
 
