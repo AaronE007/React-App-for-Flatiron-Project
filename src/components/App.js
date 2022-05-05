@@ -1,6 +1,12 @@
 import React from "react";
 import { RecipeContainer} from '../items/RecipeContainer';
 import { RecipeCard} from './items/CharacterCard';
+import {About} from './About'
+import {Header} from './nav/Header'
+
+
+
+
 
 
 
@@ -16,6 +22,19 @@ function App() {
       <NavBar />
       <Header />
       <Switch>
+      
+      <Route path="/recipes">
+        <RecipeContainer />
+      </Route>
+
+      <Route path="/recipe/:id">
+         <RecipeCard />
+        </Route>
+
+      <Route path="/about">
+        <About />
+      </Route>
+
         <Route path="/">
           <Home />
         </Route>
