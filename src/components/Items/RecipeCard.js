@@ -9,4 +9,4 @@ const RecipeCard = () => {
   )
 }
 
-export default Card
+export default RecipeCard
