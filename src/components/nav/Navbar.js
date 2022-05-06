@@ -50,7 +50,7 @@ const Navbar = () => {
         exact
         style={style}
         to='/'
-        >NewRecipe</NavLink>
+        >New Recipe</NavLink>
     </div>
   )
 }
