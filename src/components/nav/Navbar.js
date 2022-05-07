@@ -31,7 +31,7 @@ const Navbar = () => {
       }}
         exact
         style={style}
-        to='/'
+        to='/about'
         >About</NavLink>
         <NavLink 
       activeStyle ={{
@@ -40,7 +40,7 @@ const Navbar = () => {
       }}
         exact
         style={style}
-        to='/'
+        to='/recipe'
         >Recipe</NavLink>
         <NavLink 
       activeStyle ={{
@@ -49,7 +49,7 @@ const Navbar = () => {
       }}
         exact
         style={style}
-        to='/'
+        to='/recipe/new'
         >New Recipe</NavLink>
     </div>
   )
