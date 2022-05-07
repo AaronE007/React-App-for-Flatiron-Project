@@ -8,14 +8,14 @@ import React from "react";
 
 
 export default function RecipeContainer() {
-const [recipes, setRecipes] = useState([])
+const [meals, setMeals] = useState([])
   
 const fetchData = async () => {
   try {
       const resp = await fetch("http://localhost:3001/meals")
       const data = await resp.json()
       console.log(data)
-      setRecipes(data)
+      setMeals(data)
   } catch (error) {
       alert(error)
   }
@@ -30,7 +30,7 @@ useEffect(() => {
 
   return (
     <div>
-      <RecipeList recipes={recipes} />
+      <RecipeList meals={meals} />
     </div>
   )
 }
