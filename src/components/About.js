@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div> style={{width: "100%"}}
+    <div style={{width: "80%"}}>
      <p style={{fontSize:"1em", fontWeight: "400"}}> 
       This is a website is for all seafood eaters and pescatarians. 
       Feel free to scroll through the recipes or checkout if there is a specific recipe you want with the search bar.
