@@ -7,8 +7,7 @@ const RecipeCard = ({meal}) => {
       <div className="card">
         <div className="cardBody">
           <h4 className="card-title">{meal.strMeal}</h4>
-        
-        
+          <img src={meal.strMealThumb} alt={meal.strMeal}/>
       </div>
       </div> 
       </div>
