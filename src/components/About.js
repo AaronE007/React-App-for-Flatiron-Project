@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export const About = () => {
+const About = () => {
   return (
     <div> style={{width: "100%"}}
      <p style={{fontSize:"1em", fontWeight: "400"}}> 
@@ -12,5 +12,7 @@ export const About = () => {
     </div>
   )
 }
+
+export default About;
 
 
