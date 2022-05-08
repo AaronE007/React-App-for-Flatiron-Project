@@ -7,6 +7,10 @@ import Search from "./Search";
 function RecipeList({meals}) {
 const [searchTerm, setSearchTerm] = useState("")
 
+const mealsForSearch = meals.filter((meal)=> 
+  meal.strMeal.toLowerCase().includes(searchTerm.toLowerCase())
+);
+
 
 
  return (
@@ -16,7 +20,7 @@ const [searchTerm, setSearchTerm] = useState("")
   </div>
     <h2>Recipes</h2>
     {
-      meals.map(meal=> (
+      mealsForSearch.map(meal=> (
         <RecipeCard itemsPerRow={2} key={meal.idMeal} meal={meal} />
       ))
     }
