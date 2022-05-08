@@ -1,31 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+import ReactCardFlip from 'react-card-flip';
+
 
 
 const RecipeCard = ({meal}) => {
-  return (
-    <div>
-      <div className="card">
-        <div className="cardBody">
-          <h4 className="card-title">{meal.strMeal}</h4>
-          <img src={meal.strMealThumb} alt={meal.strMeal}/>
-      </div>
-      </div> 
-      </div>
-  )
+  const [isFlipped, setIsFlipped] = useState(false);
+
+
+  const handleClick = () => {
+    setIsFlipped(!isFlipped);
+  }
+
+   
+    return (
+      <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
+        <div>
+        <h4 className="card-title">{meal.strMeal}</h4>
+        <img src={meal.strMealThumb} alt={meal.strMeal}/>
+        <br/>
+          <button onClick={handleClick}>Click to See Recipe</button>
+        </div>
+
+        <div>
+          This is the back of the card.
+          <button onClick={handleClick}>Click to See the Recipe Completed</button>
+        </div>
+      </ReactCardFlip>
+    )
+  
 }
 
 export default RecipeCard
 
-// function Stock({ stock, handleClick }) {
-//   return (
-//     <div>
-//       <div className="card" onClick={() => handleClick(stock)}>
-//         <div className="card-body">
-//           <h5 className="card-title">{stock.name}</h5>
-//           <p className="card-text">{`${stock.ticker}: ${stock.price}`}</p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-// export default Stock;
+
+// <div>
+// <div className="card">
+//   <div className="cardBody">
+//     <h4 className="card-title">{meal.strMeal}</h4>
+//     <img src={meal.strMealThumb} alt={meal.strMeal}/>
+//   </div>
+// </div> 
+// </div>
