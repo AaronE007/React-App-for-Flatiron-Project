@@ -1,10 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import RecipeCard from "./RecipeCard";
+import Search from "./Search";
+
 
 
 function RecipeList({meals}) {
-  return (
+const [searchTerm, setSearchTerm] = useState("")
+
+
+
+ return (
   <div>
+    <div>
+  <Search searchTerm={searchTerm} onChangeSearch={setSearchTerm}  />  
+  </div>
     <h2>Recipes</h2>
     {
       meals.map(meal=> (

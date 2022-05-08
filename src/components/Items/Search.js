@@ -1,9 +1,13 @@
 import React from "react";
 
-const Search = () => {
+const Search = ({ searchTerm,onChangeSearch }) => {
+  const handleChange = (e) => {
+    onChangeSearch(e.target.value)
+  }
+
   return (
-    <div>
-      
+    <div className="search">
+      <input className="prompt" value={searchTerm} onChange={handleChange} />
     </div>
   )
 }
