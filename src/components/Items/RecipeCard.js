@@ -14,15 +14,16 @@ const RecipeCard = ({meal}) => {
    
     return (
       <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
-        <div>
+        <div style={{margin: "auto", border: "solid", backgroundColor: "blue", height: 800, width: 800, color: "gold"}}>
         <h4 className="card-title">{meal.strMeal}</h4>
         <img src={meal.strMealThumb} alt={meal.strMeal}/>
         <br/>
           <button onClick={handleClick}>Click to See Recipe</button>
         </div>
 
-        <div>
-          This is the back of the card.
+        <div style={{margin: "auto", border: "solid", backgroundColor: "gold", height: 800, width: 800, color: "blue"}}>
+          <h4 className="card-ingredients">{meal.strIngredients}</h4>
+          <h5 className="card-instructions">{meal.strInstructions}</h5>
           <button onClick={handleClick}>Click to See the Recipe Completed</button>
         </div>
       </ReactCardFlip>
@@ -33,11 +34,3 @@ const RecipeCard = ({meal}) => {
 export default RecipeCard
 
 
-// <div>
-// <div className="card">
-//   <div className="cardBody">
-//     <h4 className="card-title">{meal.strMeal}</h4>
-//     <img src={meal.strMealThumb} alt={meal.strMeal}/>
-//   </div>
-// </div> 
-// </div>
