@@ -1,21 +1,46 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const Form = () => {
   const [recipeName, setRecipeName] = useState("")
   const [recipeImage, setRecipeImage] = useState("")
   const [ingredients, setIngredients] = useState("")
   const [instructions, setInstructions] = useState("")
-  const newRecipes = {}
-
+  
   function handleSubmit(event) {
     event.preventDefault()
     if([recipeName,recipeImage,ingredients,instructions].some(value => value.trim() === "")){
       alert("Make sure that all of the sections are filled before continuing.")
       return null
     }
+    const newRecipes = {recipeName, recipeImage, ingredients, instructions}
+
+    const postRecipes = async () => {
+    const settings = {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        }
+    };
+    try {
+        const fetchResponse = await fetch(``, settings);
+        const data = await fetchResponse.json(newRecipes);
+        return data;
+    } catch (e) {
+        return e;
+    }    
+
+}
+ setRecipeName("")
+ setRecipeImage("")
+ setIngredients("")
+ setInstructions("")
+   postRecipes()
+ }
+
+
   
-  }
-  
+
 
   
 
