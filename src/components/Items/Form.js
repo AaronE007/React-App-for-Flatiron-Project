@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Form = () => {
   const [recipeName, setRecipeName] = useState("")
   const [recipeImage, setRecipeImage] = useState("")
   const [ingredients, setIngredients] = useState("")
   const [instructions, setInstructions] = useState("")
+  
   
   function handleSubmit(event) {
     event.preventDefault()
@@ -14,7 +16,7 @@ const Form = () => {
     }
     const newRecipes = {recipeName, recipeImage, ingredients, instructions}
 
-    const postRecipes = async () => {
+    async () => {
     const settings = {
         method: 'POST',
         headers: {
@@ -35,7 +37,7 @@ const Form = () => {
  setRecipeImage("")
  setIngredients("")
  setInstructions("")
-   postRecipes()
+  useHistory().push("/recipes")
  }
 
 
