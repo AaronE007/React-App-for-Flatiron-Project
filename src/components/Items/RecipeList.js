@@ -16,8 +16,9 @@ const mealsForSearch = meals.filter((meal)=>
  return (
   <div>
     <div>
-  <Search searchTerm={searchTerm} onChangeSearch={setSearchTerm}  />  
-  </div>
+      <h5>Key Word Search for a Recipe Below</h5>
+      <Search searchTerm={searchTerm} onChangeSearch={setSearchTerm}  />  
+    </div>
     <h2>Recipes</h2>
     {
       mealsForSearch.map(meal=> (

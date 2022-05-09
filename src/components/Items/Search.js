@@ -1,7 +1,9 @@
 import React from "react";
 
 const Search = ({ searchTerm,onChangeSearch }) => {
+  
   const handleChange = (e) => {
+    e.preventDefault(e)
     onChangeSearch(e.target.value)
   }
 
