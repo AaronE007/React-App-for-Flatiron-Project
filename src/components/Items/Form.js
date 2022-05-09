@@ -5,12 +5,13 @@ const Form = () => {
   const [recipeImage, setRecipeImage] = useState("")
   const [ingredients, setIngredients] = useState("")
   const [instructions, setInstructions] = useState("")
-
+  const newRecipes = {}
 
   function handleSubmit(event) {
     event.preventDefault()
-    if([recipeName,recipeImage,ingredients,instructions]).some(val => val.trim() === "")){
-      alert("Make sure that all of the vla")
+    if([recipeName,recipeImage,ingredients,instructions].some(value => value.trim() === "")){
+      alert("Make sure that all of the sections are filled before continuing.")
+      return null
     }
   
   }
