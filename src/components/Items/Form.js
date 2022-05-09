@@ -16,23 +16,11 @@ const Form = () => {
     }
     const newRecipes = {recipeName, recipeImage, ingredients, instructions}
 
-    async () => {
-    const settings = {
-        method: 'POST',
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-        }
-    };
-    try {
-        const fetchResponse = await fetch(``, settings);
-        const data = await fetchResponse.json(newRecipes);
-        return data;
-    } catch (e) {
-        return e;
-    }    
-
-}
+    fetch("http://localhost:3001/meals", {
+      Method: "Post",
+      Headers: { "Content-Type": "application/json"},
+      body: JSON.stringify(newCharacter)
+})
  setRecipeName("")
  setRecipeImage("")
  setIngredients("")
