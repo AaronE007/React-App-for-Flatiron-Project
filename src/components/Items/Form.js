@@ -7,10 +7,7 @@ const Form = () => {
   const [instructions, setInstructions] = useState("")
 
 
-  const handlesubmit = (event) => {
-
-
-  };
+  
 
   return (
     <div>
