@@ -2,6 +2,9 @@ import React, {useState} from "react";
 
 const Form = () => {
   const [recipeName, setRecipeName] = useState("")
+  const [recipeImage, setRecipeImage] = useState("")
+  const [ingredients, setIngredients] = useState("")
+  const [instructions, setInstructions] = useState("")
 
 
   const handlesubmit = (event) => {
@@ -14,12 +17,12 @@ const Form = () => {
       <form >
       <label htmlFor="RecipeName">Recipe name</label>
       <input onChange={event => setRecipeName(event.target.value)} type="text" name="recipe" id="name" value={recipeName} required/><br />
-      <label htmlFor="RecipeImage">Recipe name</label>
-      <input onChange={event => setRecipeName(event.target.value)} type="text" name="name" id="name" value={recipeName} required/><br />
-      <label htmlFor="Ingredients">Recipe name</label>
-      <input onChange={event => setRecipeName(event.target.value)} type="text" name="name" id="name" value={recipeName} required/><br />
-      <label htmlFor="Instructions">Recipe name</label>
-      <input onChange={event => setRecipeName(event.target.value)} type="text" name="name" id="name" value={recipeName} required/><br />
+      <label htmlFor="RecipeImage">Recipe Image</label>
+      <input onChange={event => setRecipeImage(event.target.value)} type="text" name="name" id="name" value={recipeImage} required/><br />
+      <label htmlFor="Ingredients">Recipe Ingredients</label>
+      <input onChange={event => setIngredients(event.target.value)} type="text" name="name" id="name" value={ingredients} required/><br />
+      <label htmlFor="Instructions">Recipe Instructions</label>
+      <input onChange={event => setInstructions(event.target.value)} type="text" name="name" id="name" value={instructions} required/><br />
       </form>
     </div>
   )
