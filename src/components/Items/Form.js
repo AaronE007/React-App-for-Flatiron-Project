@@ -6,6 +6,7 @@ const Form = () => {
   const [recipeImage, setRecipeImage] = useState("")
   const [ingredients, setIngredients] = useState("")
   const [instructions, setInstructions] = useState("")
+  const hist = useHistory()
   
   
   function handleSubmit(event) {
@@ -19,32 +20,27 @@ const Form = () => {
     fetch("http://localhost:3001/meals", {
       Method: "Post",
       Headers: { "Content-Type": "application/json"},
-      body: JSON.stringify(newCharacter)
+      body: JSON.stringify(newRecipes)
 })
  setRecipeName("")
  setRecipeImage("")
  setIngredients("")
  setInstructions("")
-  useHistory().push("/recipes")
+  hist.push("/recipes")
  }
 
 
-  
-
-
-  
-
   return (
-    <div style={{margin: "auto", border: "solid", backgroundColor: "blue", height: 150, width: 400, color: "gold", fontWeight: "superBold"}}>
+    <div >
       <form onSubmit={handleSubmit}>
       <label htmlFor="RecipeName">Recipe name</label>
-      <input onChange={event => setRecipeName(event.target.value)} type="text" name="recipe" id="name" value={recipeName} required/><br />
+      <input onChange={event => setRecipeName(event.target.value)} type="text" name="recipe" id="recipeName" value={recipeName} required/><br />
       <label htmlFor="RecipeImage">Recipe Image</label>
-      <input onChange={event => setRecipeImage(event.target.value)} type="text" name="name" id="name" value={recipeImage} required/><br />
+      <input onChange={event => setRecipeImage(event.target.value)} type="text" name="name" id="recipeImage" value={recipeImage} required/><br />
       <label htmlFor="Ingredients">Recipe Ingredients</label>
-      <input onChange={event => setIngredients(event.target.value)} type="text" name="name" id="name" value={ingredients} required/><br />
+      <input onChange={event => setIngredients(event.target.value)} type="text" name="name" id="ingredients" value={ingredients} required/><br />
       <label htmlFor="Instructions">Recipe Instructions</label>
-      <input onChange={event => setInstructions(event.target.value)} type="text" name="name" id="name" value={instructions} required/><br />
+      <input onChange={event => setInstructions(event.target.value)} type="text" name="instructions" id="name" value={instructions} required/><br />
       </form>
     </div>
   )
