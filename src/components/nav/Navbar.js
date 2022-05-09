@@ -19,7 +19,6 @@ const Navbar = () => {
       <Link style={style} to="/about">About</Link>
       <Link style={style}  to="/recipes">Recipes</Link>
       <Link style={style} to="/Form">Add Recipes Form</Link>
-
     </nav>
   )
 }

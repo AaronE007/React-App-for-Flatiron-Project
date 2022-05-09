@@ -10,7 +10,7 @@ const Form = () => {
   
 
   return (
-    <div>
+    <div style={{margin: "auto", border: "solid", backgroundColor: "blue", height: 150, width: 400, color: "gold", fontWeight: "superBold"}}>
       <form >
       <label htmlFor="RecipeName">Recipe name</label>
       <input onChange={event => setRecipeName(event.target.value)} type="text" name="recipe" id="name" value={recipeName} required/><br />
