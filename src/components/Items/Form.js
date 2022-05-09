@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 
 const Form = () => {
+  const [recipeName, setRecipeName] = useState("")
 
 
-  const handlesubmit = (e) => {
+  const handlesubmit = (event) => {
 
 
   };
@@ -12,7 +13,7 @@ const Form = () => {
     <div>
       <form >
       <label htmlFor="RecipeName">Recipe name</label>
-      <input onChange={event => setRecipeName(event.target.value)} type="text" name="name" id="name" value={recipeName} required/><br />
+      <input onChange={event => setRecipeName(event.target.value)} type="text" name="recipe" id="name" value={recipeName} required/><br />
       <label htmlFor="RecipeImage">Recipe name</label>
       <input onChange={event => setRecipeName(event.target.value)} type="text" name="name" id="name" value={recipeName} required/><br />
       <label htmlFor="Ingredients">Recipe name</label>
