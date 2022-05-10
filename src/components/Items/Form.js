@@ -2,16 +2,29 @@ import React, { useState } from "react";
 import { Form } from "semantic-ui-react";
 
 const Form = () => {
-
+  
   const [formData, setFormData] = useState({
+    strMeal:"",
+    strThumb:"",
+    strIngredients:"",
+    strInstructions"",
+  });
+
 
   
-  function handleSubmit(event) {
-    event.preventDefault()
+  function handleSubmit() {
+    const newRecipes = {
+      strMeal: formData.,
+    strThumb:formData.,
+    strIngredients:formData.,
+    strInstructions: formData.,
+
+     }
     if([strMeal,strMealThumb,strIngredients,strInstructions].some(value => value.trim() === "")){
       alert("Make sure that all of the sections are filled before continuing.")
       return null
     }
+
 
     fetch("http://localhost:3001/meals", {
       method: "Post",
