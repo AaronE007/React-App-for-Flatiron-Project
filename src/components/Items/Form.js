@@ -14,18 +14,16 @@ const Form = () => {
   
   function handleSubmit() {
     const newRecipes = {
-      strMeal: formData.,
-    strThumb:formData.,
-    strIngredients:formData.,
-    strInstructions: formData.,
+      strMeal: formData.strMeal,
+    strThumb:formData.strThumb,
+    strIngredients:formData.strIngredients,
+    strInstructions: formData.strInstructions,
 
      }
     if([strMeal,strMealThumb,strIngredients,strInstructions].some(value => value.trim() === "")){
       alert("Make sure that all of the sections are filled before continuing.")
       return null
     }
-
-
     fetch("http://localhost:3001/meals", {
       method: "Post",
       headers: { "Content-Type": "application/json" },
