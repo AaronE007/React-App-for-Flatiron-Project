@@ -1,5 +1,4 @@
 import React from "react";
-import Form from "./Items/Form";
 import RecipeContainer from '../containers/RecipeContainer';
 import  RecipeCard from './Items/RecipeCard';
 import About from './About';
@@ -28,9 +27,7 @@ function App() {
           <About />
         </Route>
 
-        <Route path="/Form">
-          <Form />
-        </Route>
+       
 
         <Route path="/">
           <Home />

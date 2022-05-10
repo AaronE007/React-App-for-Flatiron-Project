@@ -25,7 +25,7 @@ useEffect(() => {
 }, [])
 
 function addNewMeal(newMeal){
-  setMeal([...meals, newMeal]);
+  setMeals([...meals, newMeal]);
 }
 
 

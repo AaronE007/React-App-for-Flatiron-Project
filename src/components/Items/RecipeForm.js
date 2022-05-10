@@ -1,45 +1,92 @@
 import React, { useState } from "react";
 import { Form } from "semantic-ui-react";
 
-const Form = () => {
+const RecipeForm = ({ addNewMeal }) => {
   
   const [formData, setFormData] = useState({
     strMeal:"",
     strThumb:"",
     strIngredients:"",
-    strInstructions"",
+    strInstructions:"",
   });
+
+  function handleChange(event) {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  }
 
 
   
   function handleSubmit() {
     const newRecipes = {
       strMeal: formData.strMeal,
-    strThumb:formData.strThumb,
-    strIngredients:formData.strIngredients,
-    strInstructions: formData.strInstructions,
+      strThumb:formData.strThumb,
+      strIngredients:formData.strIngredients,
+      strInstructions: formData.strInstructions,
 
      }
-    if([strMeal,strMealThumb,strIngredients,strInstructions].some(value => value.trim() === "")){
-      alert("Make sure that all of the sections are filled before continuing.")
-      return null
-    }
+    // if([strMeal,strMealThumb,strIngredients,strInstructions].some(value => value.trim() === "")){
+    //   alert("Make sure that all of the sections are filled before continuing.")
+    //   return null
+    // }
     fetch("http://localhost:3001/meals", {
       method: "Post",
-      headers: { "Content-Type": "application/json" },
+      headers: { 
+        "Content-Type": "application/json" 
+      },
       body: JSON.stringify(newRecipes)
     })
+    .then((r) => r.json())
+    .then(addNewMeal)
+  }
 
 
 return (
   <div > 
-    <form >
-     
-    </form>
+    <h3>Add New Recipes Here:</h3>
+      
+        <Form onSubmit={handleSubmit}>
+          <Form.Group widths="equals">
+            <Form.Input
+            fluid
+            label="Name"
+            placeholder="Recipe Name Here"
+            name="name"
+            value={formData.strMeal}
+            onChange={handleChange}
+          />
+          <Form.Input
+            fluid
+            label="image"
+            placeholder="Recipe Image"
+            name="image"
+            value={formData.image}
+            onChange={handleChange}
+          />
+          <Form.Input
+            fluid
+            label="instructions"
+            placeholder="instructions here"
+            name="instructions"
+            value={formData.strInstructions}
+            onChange={handleChange}
+          />
+          <Form.Input
+            fluid
+            label="ingredients"
+            placeholder="Ingredients List here"
+            name="ingredients"
+            value={formData.strIngredients}
+            onChange={handleChange}
+          />
+      </Form.Group>
+    </Form>
   </div>
   )
 }
-export default Form
+export default RecipeForm
 
 // const Form = () => {
 //   const [strMeal, setstrMeal] = useState("")
