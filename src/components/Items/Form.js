@@ -37,19 +37,19 @@ return (
       <br />
       <br />
       <label htmlFor="RecipeName">Recipe name</label>
-      <input onChange={event => setstrMeal(event.target.value)} type="text" name="recipe" id="recipeName" value={strMeal} required/>
+      <input onChange={event => setstrMeal(event.target.value)} type="text" name="recipe"  value={strMeal} required/>
       <br />
       <br />
       <label htmlFor="RecipeImage">Recipe Image</label>
-      <input onChange={event => setRecipeImage(event.target.value)} type="text" name="name" id="recipeImage" value={strMealThumb} required/>
+      <input onChange={event => setRecipeImage(event.target.value)} type="text" name="image"  value={strMealThumb} required/>
       <br />
       <br />
       <label htmlFor="Ingredients">Recipe Ingredients</label>
-      <input onChange={event => setstrIngredients(event.target.value)} type="text" name="name" id="ingredients" value={strIngredients} required/>
+      <input onChange={event => setstrIngredients(event.target.value)} type="text" name="ingredients"  value={strIngredients} required/>
       <br />
       <br />
       <label htmlFor="Instructions">Recipe Instructions</label>
-      <input onChange={event => setstrInstructions(event.target.value)} type="text" name="instructions" id="name" value={strInstructions} required/>
+      <input onChange={event => setstrInstructions(event.target.value)} type="text" name="instructions"  value={strInstructions} required/>
     </form>
   </div>
   )
