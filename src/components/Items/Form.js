@@ -15,13 +15,13 @@ const Form = () => {
       alert("Make sure that all of the sections are filled before continuing.")
       return null
     }
-    const newRecipes = {strMeal: strMeal, strMealThumb: strMealThumb, strIngredients: strIngredients, strInstructions: strInstructions}
+    const newRecipes = {strMeal,strMealThumb, strIngredients, strInstructions}
 
     fetch("http://localhost:3001/meals", {
-      Method: "Post",
-      Headers: { "Content-Type": "application/json" },
+      method: "Post",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newRecipes)
-})
+    })
     setstrMeal("")
     setRecipeImage("")
     setstrIngredients("")
@@ -37,7 +37,7 @@ return (
       <br />
       <br />
       <label htmlFor="RecipeName">Recipe name</label>
-      <input onChange={event => strMeal(event.target.value)} type="text" name="recipe" id="recipeName" value={strMeal} required/>
+      <input onChange={event => setstrMeal(event.target.value)} type="text" name="recipe" id="recipeName" value={strMeal} required/>
       <br />
       <br />
       <label htmlFor="RecipeImage">Recipe Image</label>
