@@ -3,7 +3,7 @@ import ReactCardFlip from 'react-card-flip';
 
 
 
-const RecipeCard = ({meal}) => {
+const RecipeCard = ({ meal }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
 

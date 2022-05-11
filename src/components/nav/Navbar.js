@@ -18,7 +18,7 @@ const Navbar = () => {
       <Link style={style} to="/">Home</Link>
       <Link style={style} to="/about">About</Link>
       <Link style={style}  to="/recipes">Recipes</Link>
-      
+      <Link style={style} to="/RecipeForm">Add Recipes Form</Link>
     </nav>
   )
 }

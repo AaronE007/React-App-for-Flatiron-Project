@@ -24,15 +24,12 @@ useEffect(() => {
  fetchData()
 }, [])
 
-function addNewMeal(newMeal){
-  setMeals([...meals, newMeal]);
-}
 
 
 
   return (
     <div>
-      <RecipeList meals={meals} addNewMeal={addNewMeal}/>
+      <RecipeList meals={meals} />
     </div>
   )
 }

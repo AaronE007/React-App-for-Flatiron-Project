@@ -1,145 +1,59 @@
 import React, { useState } from "react";
-import { Form } from "semantic-ui-react";
+import { useHistory } from "react-router-dom";
 
-const RecipeForm = ({ addNewMeal }) => {
+const Form = () => {
+  const [strMeal, setstrMeal] = useState("")
+  const [strMealThumb, setMealThumb] = useState("")
+  const [strIngredients, setstrIngredients] = useState("")
+  const [strInstructions, setstrInstructions] = useState("")
+  const hist = useHistory()
   
-  const [formData, setFormData] = useState({
-    strMeal:"",
-    strThumb:"",
-    strIngredients:"",
-    strInstructions:"",
-  });
-
-  function handleChange(event) {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
-  }
-
-
   
-  function handleSubmit() {
-    const newRecipes = {
-      strMeal: formData.strMeal,
-      strThumb:formData.strThumb,
-      strIngredients:formData.strIngredients,
-      strInstructions: formData.strInstructions,
+const handleSubmit = (event) => {
+    event.preventDefault()
+    if([strMeal,strMealThumb,strIngredients,strInstructions].some(value => value.trim() === "")){
+      alert("Make sure that all of the sections are filled before continuing.")
+      return null
+    }
+    const newRecipes = {strMeal,strMealThumb, strIngredients, strInstructions}
 
-     }
-    // if([strMeal,strMealThumb,strIngredients,strInstructions].some(value => value.trim() === "")){
-    //   alert("Make sure that all of the sections are filled before continuing.")
-    //   return null
-    // }
     fetch("http://localhost:3001/meals", {
       method: "Post",
-      headers: { 
-        "Content-Type": "application/json" 
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newRecipes)
     })
-    .then((r) => r.json())
-    .then(addNewMeal)
-  }
+    setstrMeal("")
+    setRecipeImage("")
+    setstrIngredients("")
+    setstrInstructions("")
+    hist.push("/recipes")
+ }
 
 
 return (
   <div > 
-    <h3>Add New Recipes Here:</h3>
-      
-        <Form onSubmit={handleSubmit}>
-          <Form.Group widths="equals">
-            <Form.Input
-            fluid
-            label="Name"
-            placeholder="Recipe Name Here"
-            name="name"
-            value={formData.strMeal}
-            onChange={handleChange}
-          />
-          <Form.Input
-            fluid
-            label="image"
-            placeholder="Recipe Image"
-            name="image"
-            value={formData.image}
-            onChange={handleChange}
-          />
-          <Form.Input
-            fluid
-            label="instructions"
-            placeholder="instructions here"
-            name="instructions"
-            value={formData.strInstructions}
-            onChange={handleChange}
-          />
-          <Form.Input
-            fluid
-            label="ingredients"
-            placeholder="Ingredients List here"
-            name="ingredients"
-            value={formData.strIngredients}
-            onChange={handleChange}
-          />
-      </Form.Group>
-    </Form>
+    <form onSubmit={handleSubmit}>
+      <input type="submit" value="Add a Recipe!" /> 
+      <br />
+      <br />
+      <label htmlFor="RecipeName">Recipe name</label>
+      <input onChange={event => setstrMeal(event.target.value)} type="text" name="strMeal"  value={strMeal}/>
+      <br />
+      <br />
+      <label htmlFor="RecipeImage">Recipe Image</label>
+      <input onChange={event => setMealThumb(event.target.value)} type="text" name="strMealThumb"  value={strMealThumb}/>
+      <br />
+      <br />
+      <label htmlFor="Ingredients">Recipe Ingredients</label>
+      <input onChange={event => setstrIngredients(event.target.value)} type="text" name="strIngredients"  value={strIngredients}/>
+      <br />
+      <br />
+      <label htmlFor="Instructions">Recipe Instructions</label>
+      <input onChange={event => setstrInstructions(event.target.value)} type="text" name="strInstructions"  value={strInstructions}/>
+    </form>
   </div>
   )
 }
-export default RecipeForm
 
-// const Form = () => {
-//   const [strMeal, setstrMeal] = useState("")
-//   const [strMealThumb, setRecipeImage] = useState("")
-//   const [strIngredients, setstrIngredients] = useState("")
-//   const [strInstructions, setstrInstructions] = useState("")
-//   const hist = useHistory()
-  
-  
-//   function handleSubmit(event) {
-//     event.preventDefault()
-//     if([strMeal,strMealThumb,strIngredients,strInstructions].some(value => value.trim() === "")){
-//       alert("Make sure that all of the sections are filled before continuing.")
-//       return null
-//     }
-//     const newRecipes = {strMeal,strMealThumb, strIngredients, strInstructions}
+export default Form
 
-//     fetch("http://localhost:3001/meals", {
-//       method: "Post",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify(newRecipes)
-//     })
-//     setstrMeal("")
-//     setRecipeImage("")
-//     setstrIngredients("")
-//     setstrInstructions("")
-//     hist.push("/recipes")
-//  }
-
-
-// return (
-//   <div > 
-//     <form onSubmit={handleSubmit}>
-//       <input type="submit" value="Add a Recipe!" /> 
-//       <br />
-//       <br />
-//       <label htmlFor="RecipeName">Recipe name</label>
-//       <input onChange={event => setstrMeal(event.target.value)} type="text" name="recipe"  value={strMeal} />
-//       <br />
-//       <br />
-//       <label htmlFor="RecipeImage">Recipe Image</label>
-//       <input onChange={event => setRecipeImage(event.target.value)} type="text" name="image"  value={strMealThumb} />
-//       <br />
-//       <br />
-//       <label htmlFor="Ingredients">Recipe Ingredients</label>
-//       <input onChange={event => setstrIngredients(event.target.value)} type="text" name="ingredients"  value={strIngredients} />
-//       <br />
-//       <br />
-//       <label htmlFor="Instructions">Recipe Instructions</label>
-//       <input onChange={event => setstrInstructions(event.target.value)} type="text" name="instructions"  value={strInstructions} />
-//     </form>
-//   </div>
-//   )
-// }
-
-// export default Form
