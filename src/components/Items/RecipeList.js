@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 import RecipeCard from "./RecipeCard";
 import Search from "./Search";
-import RecipeForm from "./RecipeForm";
 
 
 
-function RecipeList({ meals, addNewMeal }) {
+
+function RecipeList({ meals }) {
 const [searchTerm, setSearchTerm] = useState("")
 
 const mealsForSearch = meals.filter((meal)=> 
@@ -17,7 +17,6 @@ const mealsForSearch = meals.filter((meal)=>
  return (
   <div>
     <div>
-      <RecipeForm addNewMeal={addNewMeal}/>
       <h5>Key Word Search for a Recipe Below</h5>
       <Search searchTerm={searchTerm} onChangeSearch={setSearchTerm}  />  
     </div>

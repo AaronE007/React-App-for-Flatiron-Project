@@ -4,10 +4,10 @@ import { Form } from "semantic-ui-react";
 const RecipeForm = ({ addNewMeal }) => {
   
   const [formData, setFormData] = useState({
-    strMeal:"",
-    strThumb:"",
-    strIngredients:"",
-    strInstructions:"",
+    strMeal: "",
+    strMealThumb: "",
+    strIngredients: "",
+    strInstructions: "",
   });
 
   function handleChange(event) {
@@ -22,8 +22,8 @@ const RecipeForm = ({ addNewMeal }) => {
   function handleSubmit() {
     const newRecipes = {
       strMeal: formData.strMeal,
-      strThumb:formData.strThumb,
-      strIngredients:formData.strIngredients,
+      strThumb: formData.strMealThumb,
+      strIngredients: formData.strIngredients,
       strInstructions: formData.strInstructions,
 
      }
@@ -34,54 +34,54 @@ const RecipeForm = ({ addNewMeal }) => {
     fetch("http://localhost:3001/meals", {
       method: "Post",
       headers: { 
-        "Content-Type": "application/json" 
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(newRecipes)
+      body: JSON.stringify(newRecipes),
     })
     .then((r) => r.json())
-    .then(addNewMeal)
+    .then(addNewMeal);
   }
 
 
 return (
   <div > 
     <h3>Add New Recipes Here:</h3>
-      
-        <Form onSubmit={handleSubmit}>
-          <Form.Group widths="equals">
-            <Form.Input
-            fluid
-            label="Name"
-            placeholder="Recipe Name Here"
-            name="name"
-            value={formData.strMeal}
-            onChange={handleChange}
-          />
-          <Form.Input
-            fluid
-            label="image"
-            placeholder="Recipe Image"
-            name="image"
-            value={formData.image}
-            onChange={handleChange}
-          />
-          <Form.Input
-            fluid
-            label="instructions"
-            placeholder="instructions here"
-            name="instructions"
-            value={formData.strInstructions}
-            onChange={handleChange}
-          />
-          <Form.Input
-            fluid
-            label="ingredients"
-            placeholder="Ingredients List here"
-            name="ingredients"
-            value={formData.strIngredients}
-            onChange={handleChange}
-          />
+    <Form onSubmit={handleSubmit}>
+      <Form.Group widths="equal">
+        <Form.Input
+        fluid
+        label="Name"
+        placeholder="Recipe Name Here"
+        name="strMeal"
+        value={formData.strMeal}
+        onChange={handleChange}
+      />
+      <Form.Input
+        fluid
+        label="image"
+        placeholder="Recipe Image"
+        name="strMealThumb"
+        value={formData.strMealThumb}
+        onChange={handleChange}
+      />
+      <Form.Input
+        fluid
+        label="instructions"
+        placeholder="instructions here"
+        name="strInstructions"
+        value={formData.strInstructions}
+        onChange={handleChange}
+      />
+      <Form.Input
+        fluid
+        label="ingredients"
+        placeholder="Ingredients List here"
+        name="strIngredients"
+        value={formData.strIngredients}
+        onChange={handleChange}
+      />
       </Form.Group>
+      <Form.Button>Submit</Form.Button>
     </Form>
   </div>
   )

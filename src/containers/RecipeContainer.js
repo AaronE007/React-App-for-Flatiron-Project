@@ -5,6 +5,11 @@ import RecipeList from '../components/Items/RecipeList'
 
 import React from "react";
 
+import { Container } from "semantic-ui-react";
+
+import RecipeForm from '../components/Items/RecipeForm';
+
+
 
 
 export default function RecipeContainer() {
@@ -31,8 +36,9 @@ function addNewMeal(newMeal){
 
 
   return (
-    <div>
-      <RecipeList meals={meals} addNewMeal={addNewMeal}/>
-    </div>
+    <Container>
+      <RecipeForm addNewMeal={addNewMeal}/>
+      <RecipeList meals={meals}/>
+    </Container>
   )
 }
