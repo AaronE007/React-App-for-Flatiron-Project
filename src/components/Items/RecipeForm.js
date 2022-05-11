@@ -23,7 +23,7 @@ const handleSubmit = (event) => {
       body: JSON.stringify(newRecipes)
     })
     setstrMeal("")
-    setRecipeImage("")
+    setMealThumb("")
     setstrIngredients("")
     setstrInstructions("")
     hist.push("/recipes")
