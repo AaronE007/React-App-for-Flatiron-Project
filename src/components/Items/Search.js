@@ -1,6 +1,6 @@
 import React from "react";
 
-const Search = ({ searchTerm,onChangeSearch }) => {
+const Search = ({ searchTerm, onChangeSearch }) => {
   
   const handleChange = (event) => {
     event.preventDefault(event)

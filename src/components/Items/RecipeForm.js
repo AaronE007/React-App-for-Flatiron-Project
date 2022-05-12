@@ -31,7 +31,7 @@ const handleSubmit = (event) => {
 
 
 return (
-  <div > 
+  <div style={{margin: "auto", border: "solid", backgroundColor: "blue", height: 200, width: 800, color: "gold"}} > 
     <form onSubmit={handleSubmit}>
       <input type="submit" value="Add a Recipe!" /> 
       <br />
