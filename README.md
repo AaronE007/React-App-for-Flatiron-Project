@@ -1,3 +1,17 @@
+# SeaFood Extravaganza!
+
+## Description 
+
+This project is a a collection of seafood specific recipes for seafood lovers and pescatarians alike. When looking for new takes on seafood recipes, the user can use a search for them with key words in the search bar. Users can also simply scroll through the list to browse through a simple collection of recipes. Recipes appear on the "Recipes" page as a card with a tittle and image. 
+
+Once a user has found a recipe that looks apetizing, they simply have to click on the "Click to See Recipe button." After this button is pressed, the card will flip, an ingredients list accomponied by the directions to make the recipe will appear. The user can then either leave the card open to compare it to another recipe or they can click the "see the recipe completed button" to revert the card back to an image of the completed product. 
+
+If the user has a recipe that they would love to contribute to the product, they can add it by navigating to the "Add Recipes From" at the top of the page with the nav bar. They then have four text boxes to complete and when they enter their recipe they will be directed back to the list of recipes. They then can find their recipe by scrolling to the bottom of the page. 
+
+I made this project because I love the culinary arts and love fresh food from the sea. More infromation about the website can be found on the "About" page and a link to my github can be found in the footer. 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

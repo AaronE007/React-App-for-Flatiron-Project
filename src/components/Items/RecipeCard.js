@@ -23,8 +23,7 @@ const RecipeCard = ({ meal }) => {
         <button onClick={handleClick}>Click to See the Recipe Completed</button>
       </div>
     </ReactCardFlip>
-  )
-  
+  ) 
 }
 
 export default RecipeCard

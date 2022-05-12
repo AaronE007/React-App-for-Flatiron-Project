@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 const About = ({ fishImage }) => {
   return (
     <div style={{margin: "auto", border: "solid", backgroundColor: "blue", height: 600, width: 850, color: "gold"}}>
