@@ -1,7 +1,7 @@
 import React from "react";
 import RecipeForm from "./Items/RecipeForm";
 import RecipeContainer from '../containers/RecipeContainer';
-import  RecipeCard from './Items/RecipeCard';
+import RecipeCard from './Items/RecipeCard';
 import About from './About';
 import Header from './nav/Header';
 import NavBar from './nav/Navbar';
@@ -10,8 +10,7 @@ import './App.css';
 import Home from './Home';
 import Footer from "./nav/Footer";
 
-
-function App() {
+const App = () => {
   
   const fishImage = window.location.origin + "/images/bigfish.jpeg"
 

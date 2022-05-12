@@ -8,7 +8,6 @@ const Form = () => {
   const [strInstructions, setstrInstructions] = useState("")
   const hist = useHistory()
   
-  
   const handleSubmit = (event) => {
     event.preventDefault()
     if([strMeal,strMealThumb,strIngredients,strInstructions].some(value => value.trim() === "")){

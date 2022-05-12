@@ -2,9 +2,7 @@ import React, {useState} from "react";
 import RecipeCard from "./RecipeCard";
 import Search from "./Search";
 
-
-
-function RecipeList({meals}) {
+const RecipeList = ({meals}) => {
 const [searchTerm, setSearchTerm] = useState("")
 
 const mealsForSearch = meals.filter((meal)=> 

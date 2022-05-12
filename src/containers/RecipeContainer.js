@@ -1,13 +1,7 @@
-
-import {useState, useEffect} from 'react'
-
 import RecipeList from '../components/Items/RecipeList'
+import React, {useState, useEffect} from "react";
 
-import React from "react";
-
-
-
-export default function RecipeContainer() {
+const RecipeContainer = () => {
 const [meals, setMeals] = useState([])
   
 const fetchData = async () => {
@@ -24,12 +18,11 @@ useEffect(() => {
  fetchData()
 }, [])
 
-
-
-
   return (
     <div>
       <RecipeList meals={meals} />
     </div>
   )
 }
+
+export default RecipeContainer
