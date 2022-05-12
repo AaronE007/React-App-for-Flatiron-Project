@@ -1,10 +1,14 @@
 import React from "react";
 
 
-const Home = () => {
+
+
+const Home = ({ fishImage }) => {
+
+
   return (
     <div>
-      <img style={{width: "80%"}} src={window.location.origin + "/images/bigfish.jpeg"} alt="A large Marlin fish" />
+      <img style={{width: "80%"}} src={fishImage} alt="A large Marlin fish" />
     </div>
   )
 }

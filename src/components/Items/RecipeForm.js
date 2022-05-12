@@ -9,7 +9,7 @@ const Form = () => {
   const hist = useHistory()
   
   
-const handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault()
     if([strMeal,strMealThumb,strIngredients,strInstructions].some(value => value.trim() === "")){
       alert("Make sure that all of the sections are filled before continuing.")
@@ -27,31 +27,30 @@ const handleSubmit = (event) => {
     setstrIngredients("")
     setstrInstructions("")
     hist.push("/recipes")
- }
+  }
 
-
-return (
-  <div style={{margin: "auto", border: "solid", backgroundColor: "blue", height: 200, width: 800, color: "gold"}} > 
-    <form onSubmit={handleSubmit}>
-      <input type="submit" value="Add a Recipe!" /> 
-      <br />
-      <br />
-      <label htmlFor="RecipeName">Recipe name</label>
-      <input onChange={event => setstrMeal(event.target.value)} type="text" name="strMeal"  value={strMeal}/>
-      <br />
-      <br />
-      <label htmlFor="RecipeImage">Recipe Image</label>
-      <input onChange={event => setMealThumb(event.target.value)} type="text" name="strMealThumb"  value={strMealThumb}/>
-      <br />
-      <br />
-      <label htmlFor="Ingredients">Recipe Ingredients</label>
-      <input onChange={event => setstrIngredients(event.target.value)} type="text" name="strIngredients"  value={strIngredients}/>
-      <br />
-      <br />
-      <label htmlFor="Instructions">Recipe Instructions</label>
-      <input onChange={event => setstrInstructions(event.target.value)} type="text" name="strInstructions"  value={strInstructions}/>
-    </form>
-  </div>
+  return (
+    <div style={{margin: "auto", border: "solid", backgroundColor: "blue", height: 200, width: 800, color: "gold"}} > 
+      <form onSubmit={handleSubmit}>
+        <input type="submit" value="Add a Recipe!" /> 
+        <br />
+        <br />
+        <label htmlFor="RecipeName">Recipe Name:</label>
+        <input onChange={event => setstrMeal(event.target.value)} type="text" name="strMeal"  value={strMeal}/>
+        <br />
+        <br />
+        <label htmlFor="RecipeImage">Recipe Image:</label>
+        <input onChange={event => setMealThumb(event.target.value)} type="text" name="strMealThumb"  value={strMealThumb}/>
+        <br />
+        <br />
+        <label htmlFor="Ingredients">Recipe Ingredients:</label>
+        <input onChange={event => setstrIngredients(event.target.value)} type="text" name="strIngredients"  value={strIngredients}/>
+        <br />
+        <br />
+        <label htmlFor="Instructions">Recipe Instructions:</label>
+        <input onChange={event => setstrInstructions(event.target.value)} type="text" name="strInstructions"  value={strInstructions}/>
+      </form>
+    </div>
   )
 }
 

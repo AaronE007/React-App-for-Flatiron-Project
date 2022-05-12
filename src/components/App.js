@@ -8,9 +8,13 @@ import NavBar from './nav/Navbar';
 import {Switch, Route} from 'react-router-dom';
 import './App.css';
 import Home from './Home';
+import Footer from "./nav/Footer";
 
 
 function App() {
+  
+  const fishImage = window.location.origin + "/images/bigfish.jpeg"
+
   return (
     <div className="App">
       <NavBar />
@@ -25,7 +29,7 @@ function App() {
         </Route>
 
         <Route path="/about">
-          <About />
+          <About fishImage={fishImage} />
         </Route>
 
         <Route path="/RecipeForm">
@@ -33,9 +37,10 @@ function App() {
         </Route>
 
         <Route path="/">
-          <Home />
+          <Home fishImage={fishImage} />
         </Route>
-      </Switch>     
+      </Switch>
+      <Footer />     
     </div>
   );
 }
