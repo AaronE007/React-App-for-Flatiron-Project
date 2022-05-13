@@ -1,13 +1,6 @@
 {
   "meals": [
     {
-      "strMeal": "Baked salmon with fennel & tomatoes",
-      "strMealThumb": "https://www.themealdb.com/images/media/meals/1548772327.jpg",
-      "id": "52959",
-      "strIngredients": "4 Mackerel 18 dried Red Chili 1 inch Ginger 8 cloves Garlic 1.5 tsp Pepper 1 tsp Cumin ½ tsp Turmeric Cinnamon stick 4 Clove 2 Cardamom 1 tbsp Sugar 2 marble sized Tamarind ball 2.5 tbsp Vinegar for frying Oil",
-      "strInstructions": "Soak all the spices ginger garlic tamarind pulp and kashmiri chilies except oil in vinegarAdd sugar and salt Also add turmeric powder. Combine all nicely and marinate for 35-40 mins. Grind the mixture until soft and smooth. Add more vinegar if required but ensure the paste has to be thick so add vinegar accordingly. If the masala paste is thin then it would not stick to the fish. Rinse the fish slit from the center and give some incision from the top. You could see the fish below for clarity. Now stuff the paste into the center and into the incision. Coat the entire fish with this paste. Marinate the fish for 30 mins. Place oil in a shallow pan once oil is quite hot shallow fry the stuffed mackerels. Fry until golden brown from both sides Serve the recheado mackerels hot with salad lime wedges rice and curry."
-    },
-    {
       "strMeal": "Cajun spiced fish tacos",
       "strMealThumb": "https://www.themealdb.com/images/media/meals/uvuyxu1503067369.jpg",
       "id": "52819",
@@ -190,11 +183,32 @@
       "strInstructions": "Heat oven to 200C/fan 180C/gas 6. Toss the potatoes with 2 tsp oil and some seasoning. Tip onto a large baking tray, then roast for 20 mins, stirring halfway, until crisp, golden and cooked through. Meanwhile, put eggs in a small pan of water, bring to the boil, then simmer for 8-10 mins, depending on how you like them cooked. Plunge into a bowl of cold water to cool for a few mins. Peel away the shells, then cut into halves. In a large salad bowl, whisk together the remaining oil, red wine vinegar, capers and chopped tomatoes. Season, tip in the onion, spinach, tuna and potatoes, then gently toss together. Top with the eggs, then serve straight away."
     },
     {
-      "strMeal": "Yolo",
-      "strMealThumb": "Yolo",
-      "strIngredients": "Yolo",
-      "strInstructions": "Yolo",
-      "id": "75Sz_Ci"
+      "strMeal": "Sword Fish",
+      "strMealThumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Swordfish_natural_environment.jpg/640px-Swordfish_natural_environment.jpg",
+      "strIngredients": "Sword Fish",
+      "strInstructions": "Make Sword Fish",
+      "id": "S9J_INi"
+    },
+    {
+      "strMeal": "Sword Fish",
+      "strMealThumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Swordfish_natural_environment.jpg/640px-Swordfish_natural_environment.jpg",
+      "strIngredients": "Sword Fish",
+      "strInstructions": "Make Sword Fish",
+      "id": "rSwWCrD"
+    },
+    {
+      "strMeal": "Sword Fish",
+      "strMealThumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Swordfish_natural_environment.jpg/640px-Swordfish_natural_environment.jpg",
+      "strIngredients": "Sword Fish",
+      "strInstructions": "Make Sword Fish",
+      "id": "2kRxTkr"
+    },
+    {
+      "strMeal": "Sword Fish",
+      "strMealThumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Swordfish_natural_environment.jpg/640px-Swordfish_natural_environment.jpg",
+      "strIngredients": "Sword Fish",
+      "strInstructions": "Make Sword Fish",
+      "id": "oNb3Ssh"
     }
   ]
 }
