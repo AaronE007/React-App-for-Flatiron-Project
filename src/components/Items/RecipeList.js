@@ -20,7 +20,7 @@ const mealsForSearch = meals.filter((meal)=>
     <h2>Recipes</h2>
     {
       mealsForSearch.map(meal=> (
-        <RecipeCard itemsPerRow={2} key={meal.id} meal={meal} />
+        <RecipeCard  key={meal.id} meal={meal} />
       ))
     }
   </div>
