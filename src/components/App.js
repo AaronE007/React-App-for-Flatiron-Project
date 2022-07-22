@@ -9,6 +9,7 @@ import {Switch, Route} from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import Footer from "./nav/Footer";
+import Counter from "./Items/Counter";
 
 const App = () => {
   
@@ -19,6 +20,9 @@ const App = () => {
       <NavBar />
       <Header />
       <Switch>
+        <Route path="/counter">
+          <Counter />
+        </Route>
         <Route path="/recipes">
           <RecipeContainer />
         </Route>
